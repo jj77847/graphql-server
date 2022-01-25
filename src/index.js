@@ -75,12 +75,12 @@ const typeDefs = gql`
 `;
 
 // Step 2: Define your resolvers
-const movieResolver = () => {
+const moviesResolver = () => {
   // return value should respect schema
   return moviesFromDB;
 };
 
-const directorResolver = () => {
+const directorsResolver = () => {
   // return value should respect schema
   return directorsFromDB;
 };
