@@ -56,12 +56,12 @@ const directorsFromDB = [
 
 // Step 1: Define schema or type definitions
 const typeDefs = gql`
-  type director {
+  type Director {
     firstName: String
     lastName: String
   }
 
-  type movie {
+  type Movie {
     id: ID
     title: String
   }
@@ -86,7 +86,7 @@ const directorsResolver = () => {
 
 const resolvers = {
   Query: {
-    movies: moviesResolver,
+    movie: moviesResolver,
     director: directorsResolver,
   },
 };
