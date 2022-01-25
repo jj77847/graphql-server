@@ -1,56 +1,56 @@
-const { ApolloServer, gql } = require('apollo-server');
+const { ApolloServer, gql } = require("apollo-server");
 
 const booksFromDB = [
   {
-    id: '111',
-    title: 'Book 1',
+    id: "1001",
+    title: "Book 1",
     pages: 100,
     author: {
-      firstName: 'Bob',
-      lastName: 'Smith',
+      firstName: "Bob",
+      lastName: "Smith",
     },
   },
   {
-    id: '222',
-    title: 'Book 2',
+    id: "222",
+    title: "Book 2",
     pages: 100,
     author: {
-      firstName: 'Bob',
-      lastName: 'Smith',
+      firstName: "Bob",
+      lastName: "Smith",
     },
   },
   {
-    id: '333',
-    title: 'Book 3',
+    id: "333",
+    title: "Book 3",
     pages: 100,
     author: {
-      firstName: 'Dan',
-      lastName: 'Smith',
+      firstName: "Dan",
+      lastName: "Smith",
     },
   },
   {
-    id: '444',
-    title: 'Book 4',
+    id: "444",
+    title: "Book 4",
     pages: 100,
     author: {
-      firstName: 'Jane',
-      lastName: 'Smith',
+      firstName: "Jane",
+      lastName: "Smith",
     },
   },
 ];
 
 const authorsFromDB = [
   {
-    firstName: 'Bob',
-    lastName: 'Smith',
+    firstName: "Bob",
+    lastName: "Smith",
   },
   {
-    firstName: 'Jane',
-    lastName: 'Smith',
+    firstName: "Jane",
+    lastName: "Smith",
   },
   {
-    firstName: 'Dan',
-    lastName: 'Smith',
+    firstName: "Dan",
+    lastName: "Smith",
   },
 ];
 
