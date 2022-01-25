@@ -1,45 +1,45 @@
 const { ApolloServer, gql } = require("apollo-server");
 
-const booksFromDB = [
+const moviesFromDB = [
   {
     id: "1001",
-    title: "Book 1",
-    pages: 100,
-    author: {
+    title: "movie 1",
+    runtime: 90,
+    director: {
       firstName: "Bob",
       lastName: "Smith",
     },
   },
   {
-    id: "222",
-    title: "Book 2",
-    pages: 100,
-    author: {
+    id: "2002",
+    title: "movie 2",
+    runtime: 120,
+    director: {
       firstName: "Bob",
       lastName: "Smith",
     },
   },
   {
-    id: "333",
-    title: "Book 3",
-    pages: 100,
-    author: {
+    id: "3003",
+    title: "movie 3",
+    runtime: 100,
+    director: {
       firstName: "Dan",
       lastName: "Smith",
     },
   },
   {
-    id: "444",
-    title: "Book 4",
-    pages: 100,
-    author: {
+    id: "4004",
+    title: "movie 4",
+    runtime: 90,
+    director: {
       firstName: "Jane",
       lastName: "Smith",
     },
   },
 ];
 
-const authorsFromDB = [
+const directorsFromDB = [
   {
     firstName: "Bob",
     lastName: "Smith",
@@ -56,39 +56,39 @@ const authorsFromDB = [
 
 // Step 1: Define schema or type definitions
 const typeDefs = gql`
-  type Author {
+  type director {
     firstName: String
     lastName: String
   }
 
-  type Book {
+  type movie {
     id: ID
     title: String
-    author: Author
+    director: Director
   }
 
   type Query {
     # all your queries here
-    books: [Book]
-    authors: [Author]
+    movie: [Movie]
+    director: [Director]
   }
 `;
 
 // Step 2: Define your resolvers
-const booksResolver = () => {
+const movieResolver = () => {
   // return value should respect schema
-  return booksFromDB;
+  return moviesFromDB;
 };
 
-const authorsResolver = () => {
+const directorResolver = () => {
   // return value should respect schema
-  return authorsFromDB;
+  return directorsFromDB;
 };
 
 const resolvers = {
   Query: {
-    books: booksResolver,
-    authors: authorsResolver,
+    movies: moviesResolver,
+    director: directorsResolver,
   },
 };
 
