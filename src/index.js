@@ -64,7 +64,6 @@ const typeDefs = gql`
   type movie {
     id: ID
     title: String
-    director: Director
   }
 
   type Query {
